@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800f0fa5acdbe5a4f9882ed3c1bb4cda, type: 3}
+  m_Name: PaperPlane
+  m_EditorClassIdentifier: 
+  JumpSpeed: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
+  gravity: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
+  RotX: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
+  RotY: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
+  RotZ: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
+  MoveX: {fileID: 11400000, guid: d68917f68b9039842ae58d90c96b9989, type: 2}
+  MoveY: {fileID: 11400000, guid: 6f6477c4eb347a54ab71a5a639ed700f, type: 2}
+  MoveZ: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}

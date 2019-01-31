@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f56ead03074b418061a1d366aa8ae, type: 3}
+  m_Name: JumpyCube
+  m_EditorClassIdentifier: 
+  JumpSpeed: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
+  gravity: {fileID: 11400000, guid: 130947094c6bc144b831de3bdb7a7266, type: 2}
+  RotX: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
+  RotY: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
+  RotZ: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
+  MoveX: {fileID: 11400000, guid: 1c18ff2c2ee347d4fb01c6ec6694cd1c, type: 2}
+  MoveY: {fileID: 11400000, guid: 574a0f0d95e58d74dad0e903c0ec156a, type: 2}
+  MoveZ: {fileID: 11400000, guid: 6365ff9f5721aba4c804408026a419e3, type: 2}
