@@ -1,89 +1,68 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.WSA.WebCam;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
-
-	private CharacterController characterController;
-	public bool isGrounded;
-	public float gravity;
-	public float fallSpeed;
-	public float jumpSpeed;
-	public float moveSpeed;
-	public Transform crouchHeight;
-	public float runSpeed;
-	public bool isSprint;
+	[SerializeField] private float runSpeed = 5f;
+	[SerializeField] private float jumpSpeed = 20f;
 	
-	
+	private Rigidbody myRigidBody;
+	public float crouchHeight;
+	private Collider myCollider;
 	
 	
 
-	void Start()
+	
+	void Start ()
 	{
-		characterController = GetComponent<CharacterController>();
+		myRigidBody = GetComponent<Rigidbody>();
+		myCollider = GetComponent<Collider>();
 	}
-
-	void Update()
-	{
-		IsGrounded();
-		Fall();
+	
+	
+	void Update () {
+		Run();
+		FlipCharacter();
 		Jump();
-		Move();
-		Duck();
-		Sprint();
 	}
 
-	void Move()
+	private void Run()
 	{
-		float xSpeed = Input.GetAxis("Horizontal");
-		if (xSpeed != 0) characterController.Move(new Vector3(xSpeed, 0) * moveSpeed * Time.deltaTime);
+		float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal"); //value is between -1 to +1
+		Vector3 playerVelocity = new Vector3(controlThrow * runSpeed, myRigidBody.velocity.y );
+		myRigidBody.velocity = playerVelocity;
 	}
 
-	void Duck()
+	private void Jump()
 	{
-		if (Input.GetKeyDown("s") && isGrounded)
+		if ((LayerMask.GetMask("Ground")))
 		{
-			transform.localScale = Vector3.down;
+			return;
+			
 		}
-	}
-
-	void Sprint()
-	{
-		//if (Input.GetKeyDown("shift") && isGrounded) characterController.Move(new Vector3
 		
-	}
-
-	void Jump()
-	{
-		if (Input.GetButtonDown("Jump") && isGrounded)
+		if (CrossPlatformInputManager.GetButtonDown("Jump"))
 		{
-			fallSpeed = -jumpSpeed;
+			Vector3 jumpVelocityToAdd = new Vector3(0f, jumpSpeed);
+			myRigidBody.velocity += jumpVelocityToAdd;
 		}
 	}
 
-	void Fall()
-	{
-		if (!isGrounded)
-		{
-			fallSpeed += gravity * Time.deltaTime;
-		}
-		else
-		{
-			if (fallSpeed > 0) fallSpeed = 0;
-		}
 
-		characterController.Move(new Vector3(0, -fallSpeed) * Time.deltaTime);
+	private void FlipCharacter()
+	{
+		bool playerHashorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
+		if (playerHashorizontalSpeed)
+		{
+			transform.localScale = new Vector3(Mathf.Sign(myRigidBody.velocity.x), 0.7f, 1f);
+		}
 	}
 
-	void IsGrounded()
-	{
-		isGrounded = Physics.Raycast(transform.position, -transform.up, characterController.height /1f);
-
-	}
 
 
 
 }
-	
-	
