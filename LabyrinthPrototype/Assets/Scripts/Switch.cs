@@ -21,10 +21,5 @@ public class Switch : MonoBehaviour
 	}
 
 
-	void SwitchActive()
-	{
-		//switchActive = Destroy(door));
-	}
-
 
 }

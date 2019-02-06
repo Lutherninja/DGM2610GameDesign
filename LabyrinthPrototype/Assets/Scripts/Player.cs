@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.XR.WSA.WebCam;
 using UnityStandardAssets.CrossPlatformInput;
+
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +11,7 @@ public class Player : MonoBehaviour
 	private Rigidbody myRigidBody;
 	public float crouchHeight;
 	private Collider myCollider;
+	public bool isGrounded = true;
 	
 	
 
@@ -28,6 +27,7 @@ public class Player : MonoBehaviour
 		Run();
 		FlipCharacter();
 		Jump();
+		Crouch();
 	}
 
 	private void Run()
@@ -39,18 +39,25 @@ public class Player : MonoBehaviour
 
 	private void Jump()
 	{
-		if ((LayerMask.GetMask("Ground")))
-		{
-			return;
-			
-		}
 		
 		if (CrossPlatformInputManager.GetButtonDown("Jump"))
 		{
 			Vector3 jumpVelocityToAdd = new Vector3(0f, jumpSpeed);
 			myRigidBody.velocity += jumpVelocityToAdd;
 		}
+
+		if (!isGrounded)
+		{
+			jumpSpeed = 0f;
+		}
+
+		if (isGrounded)
+		{
+			jumpSpeed = 19f;
+		}
+
 	}
+
 
 
 	private void FlipCharacter()
@@ -62,6 +69,35 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	private void OnCollisionEnter(Collision other)
+	{
+		if (LayerMask.GetMask("Ground") != 0)
+		{
+			isGrounded = true;
+		}
+		
+	}
+
+	private void OnCollisionExit(Collision other)
+	{
+		if (LayerMask.GetMask("Ground") != 0)
+		{
+			isGrounded = false;
+		}
+	}
+
+	void Crouch()
+	{
+		if (Input.GetKeyDown("s"))
+		{
+		transform.localScale = new Vector3(1f, crouchHeight, 1f);
+		}
+
+		if (Input.GetKeyUp("s"))
+		{
+			transform.localScale = new Vector3(1f, 0.7f, 1f);
+		}
+	}
 
 
 
