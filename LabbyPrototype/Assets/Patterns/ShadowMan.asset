@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f56ead03074b418061a1d366aa8ae, type: 3}
+  m_Name: ShadowMan
+  m_EditorClassIdentifier: 
+  JumpSpeed: {fileID: 11400000, guid: eb8f2a921e812e74b842c23af97ef1ad, type: 2}
+  gravity: {fileID: 11400000, guid: 4c03ab1032ea4fc4388f173a9eaf6f26, type: 2}
+  RotX: {fileID: 11400000, guid: eb8f2a921e812e74b842c23af97ef1ad, type: 2}
+  RotY: {fileID: 11400000, guid: eb8f2a921e812e74b842c23af97ef1ad, type: 2}
+  RotZ: {fileID: 11400000, guid: eb8f2a921e812e74b842c23af97ef1ad, type: 2}
+  MoveX: {fileID: 11400000, guid: a5ae452c200a9ce4e8ef0752b3df4273, type: 2}
+  MoveY: {fileID: 11400000, guid: eb8f2a921e812e74b842c23af97ef1ad, type: 2}
+  MoveZ: {fileID: 11400000, guid: eb8f2a921e812e74b842c23af97ef1ad, type: 2}
