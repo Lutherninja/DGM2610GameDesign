@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
 	
 	private Rigidbody myRigidBody;
 	public float crouchHeight;
-	private Collider myCollider;
+	private CapsuleCollider myBodyCollider;
+	private BoxCollider myFeetCollider;
 	public bool isGrounded = true;
 	
 	
@@ -19,7 +20,8 @@ public class Player : MonoBehaviour
 	void Start ()
 	{
 		myRigidBody = GetComponent<Rigidbody>();
-		myCollider = GetComponent<Collider>();
+		myBodyCollider = GetComponent<CapsuleCollider>();
+		myFeetCollider = GetComponent<BoxCollider>();
 	}
 	
 	
@@ -69,9 +71,12 @@ public class Player : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionEnter(Collision other)
+	
+	//GROUND CHECK
+	private void OnCollisionStay(Collision other)
 	{
-		if (LayerMask.GetMask("Ground") != 0)
+		// not working how  I thought
+		if (myFeetCollider && LayerMask.GetMask("Ground") != 0)
 		{
 			isGrounded = true;
 		}
@@ -80,12 +85,14 @@ public class Player : MonoBehaviour
 
 	private void OnCollisionExit(Collision other)
 	{
-		if (LayerMask.GetMask("Ground") != 0)
+		if (myFeetCollider && LayerMask.GetMask("Ground") !=0)
 		{
 			isGrounded = false;
 		}
 	}
 
+	
+	//CROUCH FUNCTION
 	void Crouch()
 	{
 		if (Input.GetKeyDown("s"))
