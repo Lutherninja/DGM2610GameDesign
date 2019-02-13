@@ -12,6 +12,7 @@
     <session id="-550235149">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="2" />
@@ -29,23 +30,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="269" />
+          <entry key="cs" value="283" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="269" />
+          <entry key="C#" value="283" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="586">
-              <caret line="108" column="32" lean-forward="true" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
+              <caret line="108" column="32" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
               <folding>
                 <marker date="1550015752830" expanded="false" signature="6:64" ph="..." />
                 <marker date="1550015752830" expanded="true" signature="102:2152" ph="{...}" />
@@ -86,15 +87,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Death.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="51" />
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding>
-                <marker date="1550016786020" expanded="true" signature="6:78" ph="..." />
-                <marker date="1550016786020" expanded="true" signature="114:238" ph="{...}" />
-                <marker date="1550016786020" expanded="true" signature="167:231" ph="{...}" />
+                <marker date="1550017208079" expanded="true" signature="6:78" ph="..." />
+                <marker date="1550017208079" expanded="true" signature="114:194" ph="{...}" />
+                <marker date="1550017208079" expanded="true" signature="167:187" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -246,7 +247,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="241" y="103" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -334,18 +334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Death.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="51" />
-          <folding>
-            <marker date="1550016786020" expanded="true" signature="6:78" ph="..." />
-            <marker date="1550016786020" expanded="true" signature="114:238" ph="{...}" />
-            <marker date="1550016786020" expanded="true" signature="167:231" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraMove.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -363,7 +351,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="586">
-          <caret line="108" column="32" lean-forward="true" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
+          <caret line="108" column="32" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
           <folding>
             <marker date="1550015752830" expanded="false" signature="6:64" ph="..." />
             <marker date="1550015752830" expanded="true" signature="102:2152" ph="{...}" />
@@ -383,6 +371,18 @@
             <marker date="1550015752830" expanded="true" signature="1829:2147" ph="{...}" />
             <marker date="1550015752830" expanded="true" signature="1864:2056" ph="{...}" />
             <marker date="1550015752830" expanded="true" signature="2084:2144" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Death.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <marker date="1550017208079" expanded="true" signature="6:78" ph="..." />
+            <marker date="1550017208079" expanded="true" signature="114:194" ph="{...}" />
+            <marker date="1550017208079" expanded="true" signature="167:187" ph="{...}" />
           </folding>
         </state>
       </provider>
