@@ -6,13 +6,13 @@ public class Player : MonoBehaviour
 {
 	[SerializeField] private float runSpeed = 10f;
 	[SerializeField] private float jumpSpeed = 20f;
-	[SerializeField} private float rollSpeed = 8f;
 	
 	private Rigidbody myRigidBody;
 	public float crouchHeight;
 	private CapsuleCollider myBodyCollider;
 	private BoxCollider myFeetCollider;
 	public bool isGrounded = true;
+	public float rollSpeed;
 	
 	
 
@@ -95,20 +95,19 @@ public class Player : MonoBehaviour
 	//CROUCH FUNCTION
 	void Crouch()
 	{
-		bool isRolling = false;
+		
 		if (Input.GetKeyDown("s"))
 		{
-		isRolling = true;
+		
 
 		transform.localScale = new Vector3(1f, crouchHeight, 1f);
 		Vector3 rollVelocitytoAdd = new Vector3 (rollSpeed, 0f);
-		myRigidBody.velocity += rollVelocitytoAdd;
+		myRigidBody.velocity += rollVelocitytoAdd*Time.deltaTime;
 
 		}
 
 		if (Input.GetKeyUp("s"))
 		{
-			isRolling = false;
 		transform.localScale = new Vector3(1f, 0.7f, 1f);
 		}
 	}
