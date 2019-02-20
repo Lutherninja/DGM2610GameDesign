@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\10689129\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\10689129\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_BabyBigFoot.-632388933.00" t="ExcludeRecursive" />
-    <e p="C:\Users\10689129\Documents\MyRepos\DGM2610GameDesign\BabyBigFoot" t="IncludeRecursive">
+    <e p="C:\Users\10689129\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_BabyBigFoot.-1702092044.00" t="ExcludeRecursive" />
+    <e p="C:\Users\10689129\Documents\MyRepos\Spring2019\DGM2610GameDesign\BabyBigFoot" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
@@ -169,10 +169,13 @@
           <e p="Crouch.cs" t="Include" />
           <e p="Death.cs" t="Include" />
           <e p="DeathZone.cs" t="Include" />
+          <e p="Flip.cs" t="Include" />
           <e p="FloatData.cs" t="Include" />
           <e p="FloatInput.cs" t="Include" />
+          <e p="Movecharacter.cs" t="Include" />
           <e p="MovePattern.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="PlayerRoll.cs" t="Include" />
           <e p="Switch.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">

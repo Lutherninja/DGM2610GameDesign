@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 		Run();
 		FlipCharacter();
 		Jump();
-		Crouch();
+//		Crouch();
 	}
 
 	private void Run()
@@ -93,25 +93,25 @@ public class Player : MonoBehaviour
 
 	
 	//CROUCH FUNCTION
-	void Crouch()
-	{
+	//void Crouch()
+	//{
 		
-		if (Input.GetKeyDown("s"))
-		{
+		//if (Input.GetKeyDown("s"))
+		//{
 		
 
-		transform.localScale = new Vector3(1f, crouchHeight, 1f);
-		Vector3 rollVelocitytoAdd = new Vector3 (rollSpeed, 0f);
-		myRigidBody.velocity += rollVelocitytoAdd*Time.deltaTime;
+		//transform.localScale = new Vector3(1f, crouchHeight, 1f);
+		//Vector3 rollVelocitytoAdd = new Vector3 (rollSpeed, 0f);
+		//myRigidBody.velocity += rollVelocitytoAdd*Time.deltaTime;
 
-		}
+		//}
 
-		if (Input.GetKeyUp("s"))
-		{
-		transform.localScale = new Vector3(1f, 0.7f, 1f);
-		}
+		//if (Input.GetKeyUp("s"))
+		//{
+		//transform.localScale = new Vector3(1f, 0.7f, 1f);
+		//}
 	}
 
 
 
-}
+

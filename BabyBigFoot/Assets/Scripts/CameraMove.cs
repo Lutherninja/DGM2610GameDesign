@@ -13,7 +13,7 @@ public class CameraMove : MonoBehaviour
 	public Transform targetObj;
 	private Vector3 targetObjVector;
 
-
+//----------------------------------------------------------------
 
 	void Update()
 	{
@@ -24,10 +24,10 @@ public class CameraMove : MonoBehaviour
 		{
 			transform.position = new Vector3(targetObjVector.x, (targetObjVector.y - offsetY), camPosition.z);
 		}
-		else
-		{
-			transform.position = new Vector3(camPosition.x+xSpeed,(targetObjVector.y - offsetY), camPosition.z);
-		}	
+			else
+			{
+				transform.position = new Vector3(camPosition.x+xSpeed,(targetObjVector.y - offsetY), camPosition.z);
+			}	
 	}
 }
 
