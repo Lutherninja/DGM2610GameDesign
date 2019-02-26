@@ -13,7 +13,9 @@ public class CameraMove : MonoBehaviour
 	public Transform targetObj;
 	private Vector3 targetObjVector;
 
-//----------------------------------------------------------------
+//---------------------------------------------------------------- 
+	
+	// WHAT IF I SWITCHED OUT CAMERAS AS THE PLAYER PASSES THE 'ENEMY' CAMERA SO THEN THE 'ENEMY' CAMERA CAN BE CONSTANTLY MOVING AND YOU COULD SLOW IT DOWN AND SHIZ
 
 	void Update()
 	{

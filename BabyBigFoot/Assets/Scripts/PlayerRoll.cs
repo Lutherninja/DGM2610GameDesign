@@ -37,18 +37,20 @@ public class PlayerRoll : MonoBehaviour
         if (isRolling)
         {
             
+            ballPos = bbfPosition;
             babyBigFoot.SetActive(false);
             Ball.SetActive(true);
-            ballPos = bbfPosition;
+            
 
 
         }
 
         if (!isRolling)
         {
+            bbfPosition = ballPos;
             Ball.SetActive(false);
             babyBigFoot.SetActive(true);
-            bbfPosition = ballPos;
+            
             //babyBigFoot.transform.position = Ball.transform.position;
         }
     } 
