@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
 
 	}
 
-
+//FLIP CHARACTER ---------------------------------------------------------------------------------------------
 
 	private void FlipCharacter()
 	{
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
 	}
 
 	
-	//GROUND CHECK
+	//GROUND CHECK -----------------------------------------------------------------------------------------
 	private void OnCollisionStay(Collision other)
 	{
 		// not working how  I thought

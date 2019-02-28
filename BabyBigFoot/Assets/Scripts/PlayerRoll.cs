@@ -13,8 +13,8 @@ public class PlayerRoll : MonoBehaviour
 
     void Start()
     {
-        bbfPosition = babyBigFoot.transform.position;
-        ballPos = Ball.transform.position;
+        babyBigFoot.transform.position = bbfPosition;
+        Ball.transform.position = ballPos;
         //grab the velocity of the player and add it to the velocity of the ball
         //get position of player and assign it to the ball
 
