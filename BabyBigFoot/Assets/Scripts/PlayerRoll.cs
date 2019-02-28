@@ -13,8 +13,8 @@ public class PlayerRoll : MonoBehaviour
 
     void Start()
     {
-        babyBigFoot.transform.position = bbfPosition;
-        Ball.transform.position = ballPos;
+       // bbfPosition = babyBigFoot.transform.position;
+       // ballPos = Ball.transform.position;
         //grab the velocity of the player and add it to the velocity of the ball
         //get position of player and assign it to the ball
 
@@ -36,10 +36,10 @@ public class PlayerRoll : MonoBehaviour
         }
         if (isRolling)
         {
-            
-            ballPos = bbfPosition;
-            babyBigFoot.SetActive(false);
             Ball.SetActive(true);
+            Ball.transform.position = babyBigFoot.transform.position;
+            babyBigFoot.SetActive(false);
+           
             
 
 
@@ -47,10 +47,14 @@ public class PlayerRoll : MonoBehaviour
 
         if (!isRolling)
         {
-            bbfPosition = ballPos;
-            Ball.SetActive(false);
+          
             babyBigFoot.SetActive(true);
-            
+            babyBigFoot.transform.position = Ball.transform.position;
+            Ball.SetActive(false);
+            babyBigFoot.transform.rotation = Quaternion.identity;
+
+
+
             //babyBigFoot.transform.position = Ball.transform.position;
         }
     } 
