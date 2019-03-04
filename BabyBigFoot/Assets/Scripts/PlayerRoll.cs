@@ -9,7 +9,8 @@ public class PlayerRoll : MonoBehaviour
     public bool isRolling;
     private Vector3 bbfPosition;
     private Vector3 ballPos;
-    
+    public Rigidbody ballRigbod;
+    public Rigidbody bbfRigbod;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class PlayerRoll : MonoBehaviour
 
 
     void Update()
+
     
     {
         if (Input.GetKeyDown("s"))
@@ -38,6 +40,7 @@ public class PlayerRoll : MonoBehaviour
         {
             Ball.SetActive(true);
             Ball.transform.position = babyBigFoot.transform.position;
+            bbfRigbod.velocity = ballRigbod.velocity;
             babyBigFoot.SetActive(false);
            
             
@@ -50,6 +53,7 @@ public class PlayerRoll : MonoBehaviour
           
             babyBigFoot.SetActive(true);
             babyBigFoot.transform.position = Ball.transform.position;
+            ballRigbod.velocity = bbfRigbod.velocity;
             Ball.SetActive(false);
             babyBigFoot.transform.rotation = Quaternion.identity;
 
