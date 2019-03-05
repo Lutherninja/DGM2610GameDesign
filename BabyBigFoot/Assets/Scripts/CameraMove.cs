@@ -22,11 +22,11 @@ public class CameraMove : MonoBehaviour
 		targetObjVector = targetObj.position;
 		camPosition = transform.position;
 		
-		if (targetObjVector.x > camPosition.x)
-		{
-			transform.position = new Vector3(targetObjVector.x, (targetObjVector.y - offsetY), camPosition.z);
-		}
-			else
+	//	if (targetObjVector.x > camPosition.x)
+		//{
+		//	transform.position = new Vector3(targetObjVector.x, (targetObjVector.y - offsetY), camPosition.z);
+		//}
+		//	else
 			{
 				transform.position = new Vector3(camPosition.x+xSpeed,(targetObjVector.y - offsetY), camPosition.z);
 			}	
