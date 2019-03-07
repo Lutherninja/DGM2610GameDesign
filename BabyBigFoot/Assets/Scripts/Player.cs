@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Net;
+using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 
@@ -7,12 +8,14 @@ public class Player : MonoBehaviour
 	[SerializeField] private float runSpeed = 10f;
 	[SerializeField] private float jumpSpeed = 20f;
 	
-	private Rigidbody myRigidBody;
-	public float crouchHeight;
+	public Rigidbody myRigidBody;
 	private CapsuleCollider myBodyCollider;
-	private BoxCollider myFeetCollider;
+	public BoxCollider myFeetCollider;
 	public bool isGrounded = true;
-	public float rollSpeed;
+	public Transform BBF;
+	public Transform Ball;
+	public Vector3 Tempvelocity;
+
 	
 	
 
@@ -21,7 +24,9 @@ public class Player : MonoBehaviour
 	{
 		myRigidBody = GetComponent<Rigidbody>();
 		myBodyCollider = GetComponent<CapsuleCollider>();
-		myFeetCollider = GetComponent<BoxCollider>();
+		BBF = transform.GetChild(0);
+		Ball = transform.GetChild(1);
+		
 	}
 	
 	
@@ -29,7 +34,25 @@ public class Player : MonoBehaviour
 		Run();
 		FlipCharacter();
 		Jump();
-//		Crouch();
+		Roll();
+		
+		if (Input.GetAxis("Vertical") < 0)
+		{
+			Tempvelocity = myRigidBody.velocity;
+			BBF.gameObject.SetActive(false);
+			Ball.gameObject.SetActive(true);
+			myRigidBody.freezeRotation = false;
+			myRigidBody.velocity = Tempvelocity;
+		}
+		else
+		{   
+			Tempvelocity = myRigidBody.velocity;
+			BBF.gameObject.SetActive(true);
+			Ball.gameObject.SetActive(false);
+			myRigidBody.freezeRotation = true;
+			myRigidBody.gameObject.transform.rotation = Quaternion.identity;
+			myRigidBody.velocity = Tempvelocity;
+		}
 	}
 
 	private void Run()
@@ -73,17 +96,17 @@ public class Player : MonoBehaviour
 
 	
 	//GROUND CHECK -----------------------------------------------------------------------------------------
-	private void OnCollisionStay(Collision other)
+	private void OnTriggerStay(Collider other)
 	{
 		// not working how  I thought
 		if (myFeetCollider && LayerMask.GetMask("Ground") != 0)
 		{
 			isGrounded = true;
 		}
-		
 	}
 
-	private void OnCollisionExit(Collision other)
+
+	private void OnTriggerExit(Collider other)
 	{
 		if (myFeetCollider && LayerMask.GetMask("Ground") !=0)
 		{
@@ -91,26 +114,23 @@ public class Player : MonoBehaviour
 		}
 	}
 
-	
+
 	//CROUCH FUNCTION
-	//void Crouch()
-	//{
-		
-		//if (Input.GetKeyDown("s"))
-		//{
-		
-
-		//transform.localScale = new Vector3(1f, crouchHeight, 1f);
-		//Vector3 rollVelocitytoAdd = new Vector3 (rollSpeed, 0f);
-		//myRigidBody.velocity += rollVelocitytoAdd*Time.deltaTime;
-
-		//}
-
-		//if (Input.GetKeyUp("s"))
-		//{
-		//transform.localScale = new Vector3(1f, 0.7f, 1f);
-		//}
+	void Roll()
+	{
+		if (Input.GetAxis("Vertical") < 0)
+		{
+			runSpeed = 0f;
+			jumpSpeed = 0f;
+		}
+		else
+		{
+			runSpeed = 10f;
+			jumpSpeed = 20f;
+		}
 	}
+
+}
 
 
 

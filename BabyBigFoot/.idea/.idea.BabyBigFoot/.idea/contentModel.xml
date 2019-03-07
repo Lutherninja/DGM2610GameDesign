@@ -165,6 +165,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraMove.cs" t="Include" />
+          <e p="Changer.cs" t="Include" />
           <e p="CharacterMovement.cs" t="Include" />
           <e p="Crouch.cs" t="Include" />
           <e p="Death.cs" t="Include" />
