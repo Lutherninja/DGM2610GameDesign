@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 
 public class MeterMarker : MonoBehaviour
@@ -8,6 +9,8 @@ public class MeterMarker : MonoBehaviour
     public Vector3 MarkerPos;
     public float xSpeed;
     public float offsetY;
+    public float slowSpeed;
+    public bool Slow;
 	
 	
 
@@ -31,5 +34,10 @@ public class MeterMarker : MonoBehaviour
         {
             transform.position = new Vector3(MarkerPos.x+xSpeed,(thresholdVector.y - offsetY), MarkerPos.z);
         }	
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+      
     }
 }

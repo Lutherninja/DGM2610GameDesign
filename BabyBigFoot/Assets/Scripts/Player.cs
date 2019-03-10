@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
 	
 	void Update () {
 		Run();
-		FlipCharacter();
 		Jump();
 		Roll();
 		
@@ -83,36 +82,29 @@ public class Player : MonoBehaviour
 
 	}
 
-//FLIP CHARACTER ---------------------------------------------------------------------------------------------
-
-	private void FlipCharacter()
-	{
-		bool playerHashorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
-		if (playerHashorizontalSpeed)
-		{
-		//	transform.localRotation = Quaternion.Euler(Mathf.Sign(myRigidBody.velocity.x), 180f, 1f);
-		}
-	}
-
 	
 	//GROUND CHECK -----------------------------------------------------------------------------------------
-	private void OnTriggerStay(Collider other)
+	private void OnCollisionStay(Collision other)
 	{
 		// not working how  I thought
 		if (myFeetCollider && LayerMask.GetMask("Ground") != 0)
 		{
 			isGrounded = true;
+			jumpSpeed = 19f;
 		}
 	}
 
 
-	private void OnTriggerExit(Collider other)
+	private void OnCollisionExit(Collision other)
 	{
 		if (myFeetCollider && LayerMask.GetMask("Ground") !=0)
 		{
 			isGrounded = false;
+			jumpSpeed = 0f;
 		}
 	}
+
+	
 
 
 	//CROUCH FUNCTION
@@ -120,13 +112,13 @@ public class Player : MonoBehaviour
 	{
 		if (Input.GetAxis("Vertical") < 0)
 		{
-			runSpeed = 0f;
-			jumpSpeed = 0f;
+			runSpeed = 10f;
+			
 		}
 		else
 		{
 			runSpeed = 10f;
-			jumpSpeed = 20f;
+			
 		}
 	}
 

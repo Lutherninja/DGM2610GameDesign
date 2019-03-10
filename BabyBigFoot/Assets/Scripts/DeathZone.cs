@@ -7,8 +7,7 @@ public class DeathZone : MonoBehaviour{
  
    void OnTriggerEnter(Collider collider)
    {
-       SceneManager.LoadScene("GameOver" +
-                              "");
+       SceneManager.LoadScene("GameOver");
    }
 
 
