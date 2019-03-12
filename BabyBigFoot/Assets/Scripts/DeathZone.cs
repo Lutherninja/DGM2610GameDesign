@@ -1,14 +1,22 @@
-﻿
- 
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DeathZone : MonoBehaviour{
- 
-   void OnTriggerEnter(Collider collider)
-   {
-       SceneManager.LoadScene("GameOver");
-   }
+    
+    
+    //GameOver----------------------------------------
+    private void OnTriggerEnter(Collider other)
+    {
+        if (GetComponent<Collider>().CompareTag("Player"))
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
+    }
+
+  
+
+   
 
 
 }

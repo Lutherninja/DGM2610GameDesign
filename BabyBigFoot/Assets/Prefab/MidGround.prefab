@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2534371107156611855}
   - component: {fileID: 2534371107155481039}
   - component: {fileID: 1415048677260997324}
+  - component: {fileID: 3486245356819383446}
   m_Layer: 0
   m_Name: MidGround
   m_TagString: Untagged
@@ -93,3 +94,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 2a64d9a292ee0254cafa95ee28fecc6f, type: 3}
+--- !u!65 &3486245356819383446
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534371107157741325}
+  m_Material: {fileID: 13400000, guid: 8f74f90e3e7211f45be0b3f7303d8fb5, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0724796, y: 1.0211115, z: 1}
+  m_Center: {x: 0.47731572, y: -0.48944423, z: -0.5}

@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 	public Transform BBF;
 	public Transform Ball;
 	public Vector3 Tempvelocity;
+	public bool IsRolling;
 
 	
 	
@@ -37,28 +38,41 @@ public class Player : MonoBehaviour
 		
 		if (Input.GetAxis("Vertical") < 0)
 		{
+			IsRolling = true;
 			Tempvelocity = myRigidBody.velocity;
 			BBF.gameObject.SetActive(false);
 			Ball.gameObject.SetActive(true);
 			myRigidBody.freezeRotation = false;
-			myRigidBody.velocity = Tempvelocity;
+			if (Tempvelocity.x > 0)
+			{
+				myRigidBody.velocity += new Vector3(0.1f,0,0);
+			}
+			else
+			{
+				myRigidBody.velocity += new Vector3(-0.1f,0,0);
+			}
+
 		}
 		else
-		{   
+		{
+			IsRolling = false;
 			Tempvelocity = myRigidBody.velocity;
 			BBF.gameObject.SetActive(true);
 			Ball.gameObject.SetActive(false);
 			myRigidBody.freezeRotation = true;
 			myRigidBody.gameObject.transform.rotation = Quaternion.identity;
-			myRigidBody.velocity = Tempvelocity;
+			
 		}
 	}
 
 	private void Run()
 	{
-		float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal"); //value is between -1 to +1
-		Vector3 playerVelocity = new Vector3(controlThrow * runSpeed, myRigidBody.velocity.y );
-		myRigidBody.velocity = playerVelocity;
+		if (!IsRolling)
+		{
+			float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal"); //value is between -1 to +1
+			Vector3 playerVelocity = new Vector3(controlThrow * runSpeed, myRigidBody.velocity.y);
+			myRigidBody.velocity = playerVelocity;
+		}
 	}
 
 	private void Jump()
@@ -84,7 +98,7 @@ public class Player : MonoBehaviour
 
 	
 	//GROUND CHECK -----------------------------------------------------------------------------------------
-	private void OnCollisionStay(Collision other)
+	private void OnTriggerStay(Collider other)
 	{
 		// not working how  I thought
 		if (myFeetCollider && LayerMask.GetMask("Ground") != 0)
@@ -95,7 +109,7 @@ public class Player : MonoBehaviour
 	}
 
 
-	private void OnCollisionExit(Collision other)
+	private void OnTriggerExit(Collider other)
 	{
 		if (myFeetCollider && LayerMask.GetMask("Ground") !=0)
 		{
@@ -103,6 +117,8 @@ public class Player : MonoBehaviour
 			jumpSpeed = 0f;
 		}
 	}
+
+	
 
 	
 
