@@ -6,10 +6,14 @@ public class SnowFall : MonoBehaviour
 {
 
     private Rigidbody SnowrigBod;
+    public GameObject slowtrigger;
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        SnowrigBod = GetComponent<Rigidbody>();
     }
 
     //Update is called once per frame
@@ -18,9 +22,15 @@ public class SnowFall : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        SnowrigBod.isKinematic = false;
-        Debug.Log("snowfall");
+        
+        {
+            SnowrigBod.isKinematic = false;
+            
+            slowtrigger.SetActive(true);
+        }
     }
+
+   
 }
