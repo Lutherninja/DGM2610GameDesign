@@ -11,7 +11,9 @@ public class MeterMarker : MonoBehaviour
     public float xSpeed;
     public float offsetY;
     public float slowSpeed;
-    public bool Slow;
+    public BoolData Slow;
+    public float normalSpeed;
+    public int timer;
     
 
 
@@ -24,14 +26,14 @@ public class MeterMarker : MonoBehaviour
     // WHAT IF I SWITCHED OUT CAMERAS AS THE PLAYER PASSES THE 'ENEMY' CAMERA SO THEN THE 'ENEMY' CAMERA CAN BE CONSTANTLY MOVING AND YOU COULD SLOW IT DOWN AND SHIZ
     void Start()
     {
-        Slow = false;
-        print(Slow);
+        Slow.Value = false;
+
     }
 
 
     void Update()
     {
-        print("Update Start " + Slow);
+        
         thresholdVector = thresholdObj.position;
         MarkerPos = transform.position;
 
@@ -45,32 +47,27 @@ public class MeterMarker : MonoBehaviour
         }
         //SLOW-----------------
         // get slow out of update and use coroutine to make it slow for a set amount of time
-        if (Slow == true)
+        if (Slow.Value)
 
         {
             xSpeed = slowSpeed;
+            
 
         }
 
-        if (!Slow)
+        else
         {
-            xSpeed = 0.2f;
+            xSpeed = normalSpeed;
         }
 
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Snow"))
-        {
-            Slow = true;
-            Debug.Log("SlowDown");
-        }
-
-        
-
-
-    }
+  
 }
+
+ 
+
+
+
 
