@@ -8,7 +8,7 @@ public class SnowFall : MonoBehaviour
     private Rigidbody SnowrigBod;
     public GameObject slowtrigger;
     private ParticleSystem snowpoof;
-    
+
     
     
     // Start is called before the first frame update
@@ -16,6 +16,7 @@ public class SnowFall : MonoBehaviour
     {
         SnowrigBod = GetComponent<Rigidbody>();
         snowpoof = GetComponent<ParticleSystem>();
+       
     }
 
     //Update is called once per frame
@@ -32,7 +33,8 @@ public class SnowFall : MonoBehaviour
             
             slowtrigger.SetActive(true);
             snowpoof.Emit(1);
-            Destroy(gameObject, 3);
+            Destroy(gameObject, 10);
+            
         }
     }
 

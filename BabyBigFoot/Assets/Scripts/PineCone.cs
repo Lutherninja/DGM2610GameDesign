@@ -5,8 +5,9 @@ using UnityEngine;
 public class PineCone : MonoBehaviour
 {
    public GameObject Pinecone;
-    public GameObject pineconespawn;
-    private Vector3 PCpos;
+    public Transform pcSpawn;
+    
+
     
     
     
@@ -20,21 +21,22 @@ public class PineCone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PCpos = pineconespawn.transform.position;
+       
         
         if (Input.GetKeyDown("e"))
         {
+            Pinecone.transform.position = pcSpawn.transform.position;
             Instantiate(Pinecone);
-            Pinecone.transform.position = PCpos;
+           
             
             
         }
 
         if (Input.GetKeyDown("q"))
         {
-           
+            Pinecone.transform.position = pcSpawn.transform.position;
             Instantiate(Pinecone);
-            Pinecone.transform.position = PCpos;
+            
 
 
         }
