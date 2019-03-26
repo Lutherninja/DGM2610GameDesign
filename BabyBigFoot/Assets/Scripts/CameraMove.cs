@@ -17,7 +17,7 @@ public class CameraMove : MonoBehaviour
 	
 	// WHAT IF I SWITCHED OUT CAMERAS AS THE PLAYER PASSES THE 'ENEMY' CAMERA SO THEN THE 'ENEMY' CAMERA CAN BE CONSTANTLY MOVING AND YOU COULD SLOW IT DOWN AND SHIZ
 
-	void Update()
+	void FixedUpdate()
 	{
 		targetObjVector = targetObj.position;
 		camPosition = transform.position;

@@ -27,16 +27,21 @@ public class SnowFall : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        
+        if (other.gameObject.CompareTag("Pinecone"))
+        {
+            snowpoof.Emit(1);
+        }
+
         {
             SnowrigBod.isKinematic = false;
             
             slowtrigger.SetActive(true);
-            snowpoof.Emit(1);
-            Destroy(gameObject, 10);
+            Destroy(gameObject, 30);
             
         }
     }
 
-   
+ 
+
+
 }

@@ -31,7 +31,7 @@ public class MeterMarker : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         
         thresholdVector = thresholdObj.position;
