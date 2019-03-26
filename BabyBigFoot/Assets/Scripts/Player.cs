@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
 			BBF.gameObject.SetActive(false);
 			Ball.gameObject.SetActive(true);
 			myRigidBody.freezeRotation = false;
+			jumpSpeed = 5;
 			if (Tempvelocity.x > 0)
 			{
 				myRigidBody.velocity += new Vector3(0.1f,0,0);
