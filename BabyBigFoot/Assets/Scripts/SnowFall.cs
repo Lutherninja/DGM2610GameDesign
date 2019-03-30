@@ -8,6 +8,7 @@ public class SnowFall : MonoBehaviour
     private Rigidbody SnowrigBod;
     public GameObject slowtrigger;
     private ParticleSystem snowpoof;
+   public GameObject emitter;
 
     
     
@@ -16,7 +17,8 @@ public class SnowFall : MonoBehaviour
     {
         SnowrigBod = GetComponent<Rigidbody>();
         snowpoof = GetComponent<ParticleSystem>();
-       
+        
+
     }
 
     //Update is called once per frame
@@ -33,10 +35,11 @@ public class SnowFall : MonoBehaviour
         }
 
         {
+            Destroy(emitter);
             SnowrigBod.isKinematic = false;
-            
             slowtrigger.SetActive(true);
             Destroy(gameObject, 30);
+            
             
         }
     }
