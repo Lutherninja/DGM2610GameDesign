@@ -5,6 +5,7 @@ using UnityEngine;
 public class PineCone : MonoBehaviour
 {
    public GameObject Pinecone;
+    public GameObject Pineconeneg;
     public Transform pcSpawn;
     
 
@@ -34,8 +35,8 @@ public class PineCone : MonoBehaviour
 
         if (Input.GetKeyDown("q"))
         {
-            Pinecone.transform.position = pcSpawn.transform.position;
-            Instantiate(Pinecone);
+            Pineconeneg.transform.position = pcSpawn.transform.position;
+            Instantiate(Pineconeneg);
             
 
 

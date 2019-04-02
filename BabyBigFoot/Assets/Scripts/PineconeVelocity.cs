@@ -11,7 +11,7 @@ public class PineconeVelocity : MonoBehaviour
     void Start()
     {
         myRB = GetComponent<Rigidbody>();
-        myRB.velocity = new Vector3(10,25,0);
+        myRB.velocity = new Vector3(15,25,0);
       
         Destroy(gameObject, 3);
     }
