@@ -183,15 +183,15 @@
       <file leaf-file-name="SnowFall.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/SnowFall.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            <state relative-caret-position="595">
+              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
               <folding>
-                <marker date="1553279179403" expanded="false" signature="6:78" ph="..." />
-                <marker date="1553279179403" expanded="true" signature="117:847" ph="{...}" />
-                <marker date="1553279179403" expanded="true" signature="307:426" ph="{...}" />
-                <marker date="1553279179403" expanded="true" signature="483:504" ph="{...}" />
-                <marker date="1553279179403" expanded="true" signature="556:840" ph="{...}" />
-                <marker date="1553279179403" expanded="true" signature="615:665" ph="{...}" />
+                <marker date="1553968020382" expanded="false" signature="6:78" ph="..." />
+                <marker date="1553968020382" expanded="true" signature="117:909" ph="{...}" />
+                <marker date="1553968020382" expanded="true" signature="337:458" ph="{...}" />
+                <marker date="1553968020382" expanded="true" signature="515:536" ph="{...}" />
+                <marker date="1553968020382" expanded="true" signature="588:902" ph="{...}" />
+                <marker date="1553968020382" expanded="true" signature="647:697" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -231,15 +231,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SlowEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PineconeVelocity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PineCone.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SnowFall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeterMarker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Restart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SnowFall.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="328" />
     <option name="y" value="-20" />
     <option name="width" value="1161" />
@@ -321,12 +321,12 @@
       <workItem from="1552661802360" duration="3474000" />
       <workItem from="1553267820919" duration="2443000" />
       <workItem from="1553394724161" duration="870000" />
-      <workItem from="1553881290486" duration="2328000" />
+      <workItem from="1553881290486" duration="3044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32068000" />
+    <option name="totallyTimeSpent" value="32784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -339,7 +339,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
@@ -461,12 +460,12 @@
         <state relative-caret-position="578">
           <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
-            <marker date="1553279179403" expanded="false" signature="6:78" ph="..." />
-            <marker date="1553279179403" expanded="true" signature="117:847" ph="{...}" />
-            <marker date="1553279179403" expanded="true" signature="307:426" ph="{...}" />
-            <marker date="1553279179403" expanded="true" signature="483:504" ph="{...}" />
-            <marker date="1553279179403" expanded="true" signature="556:840" ph="{...}" />
-            <marker date="1553279179403" expanded="true" signature="615:665" ph="{...}" />
+            <marker date="1553968020382" expanded="false" signature="6:78" ph="..." />
+            <marker date="1553968020382" expanded="true" signature="117:909" ph="{...}" />
+            <marker date="1553968020382" expanded="true" signature="337:458" ph="{...}" />
+            <marker date="1553968020382" expanded="true" signature="515:536" ph="{...}" />
+            <marker date="1553968020382" expanded="true" signature="588:902" ph="{...}" />
+            <marker date="1553968020382" expanded="true" signature="647:697" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -615,15 +614,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/SnowFall.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="595">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
           <folding>
-            <marker date="1553279179403" expanded="false" signature="6:78" ph="..." />
-            <marker date="1553279179403" expanded="true" signature="117:847" ph="{...}" />
-            <marker date="1553279179403" expanded="true" signature="307:426" ph="{...}" />
-            <marker date="1553279179403" expanded="true" signature="483:504" ph="{...}" />
-            <marker date="1553279179403" expanded="true" signature="556:840" ph="{...}" />
-            <marker date="1553279179403" expanded="true" signature="615:665" ph="{...}" />
+            <marker date="1553968020382" expanded="false" signature="6:78" ph="..." />
+            <marker date="1553968020382" expanded="true" signature="117:909" ph="{...}" />
+            <marker date="1553968020382" expanded="true" signature="337:458" ph="{...}" />
+            <marker date="1553968020382" expanded="true" signature="515:536" ph="{...}" />
+            <marker date="1553968020382" expanded="true" signature="588:902" ph="{...}" />
+            <marker date="1553968020382" expanded="true" signature="647:697" ph="{...}" />
           </folding>
         </state>
       </provider>
