@@ -31,14 +31,13 @@ public class SnowFall : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Pinecone"))
         {
-            snowpoof.Emit(1);
+            snowpoof.Emit(15);
         }
 
         {
             Destroy(emitter);
             SnowrigBod.isKinematic = false;
             slowtrigger.SetActive(true);
-            Destroy(gameObject, 30);
             
             
         }
