@@ -187,13 +187,13 @@
       <file leaf-file-name="BBF_Anim_code.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BBF_Anim_code.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="170">
+              <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
               <folding>
-                <marker date="1555525041675" expanded="false" signature="6:78" ph="..." />
-                <marker date="1555525041675" expanded="true" signature="122:486" ph="{...}" />
-                <marker date="1555525041675" expanded="true" signature="219:288" ph="{...}" />
-                <marker date="1555525041675" expanded="true" signature="346:484" ph="{...}" />
+                <marker date="1555525201895" expanded="false" signature="6:78" ph="..." />
+                <marker date="1555525201895" expanded="true" signature="122:484" ph="{...}" />
+                <marker date="1555525201895" expanded="true" signature="217:286" ph="{...}" />
+                <marker date="1555525201895" expanded="true" signature="344:482" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -245,7 +245,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="328" />
     <option name="y" value="-20" />
     <option name="width" value="1161" />
@@ -329,12 +329,12 @@
       <workItem from="1553394724161" duration="870000" />
       <workItem from="1553881290486" duration="3044000" />
       <workItem from="1554734713565" duration="363000" />
-      <workItem from="1555523966346" duration="1081000" />
+      <workItem from="1555523966346" duration="1432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34228000" />
+    <option name="totallyTimeSpent" value="34579000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -346,8 +346,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
@@ -680,13 +679,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BBF_Anim_code.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="170">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
           <folding>
-            <marker date="1555525041675" expanded="false" signature="6:78" ph="..." />
-            <marker date="1555525041675" expanded="true" signature="122:486" ph="{...}" />
-            <marker date="1555525041675" expanded="true" signature="219:288" ph="{...}" />
-            <marker date="1555525041675" expanded="true" signature="346:484" ph="{...}" />
+            <marker date="1555525201895" expanded="false" signature="6:78" ph="..." />
+            <marker date="1555525201895" expanded="true" signature="122:484" ph="{...}" />
+            <marker date="1555525201895" expanded="true" signature="217:286" ph="{...}" />
+            <marker date="1555525201895" expanded="true" signature="344:482" ph="{...}" />
           </folding>
         </state>
       </provider>
