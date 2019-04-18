@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 178985476019278311}
   - component: {fileID: 351340662945282626}
   - component: {fileID: 113962159}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BBF_Export_BigTrunk (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6927618146453482782}
   - component: {fileID: 2302636772895055386}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

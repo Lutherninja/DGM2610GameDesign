@@ -7,6 +7,7 @@ TagManager:
   - Snow
   - Enemy
   - Pinecone
+  - Jumpbox
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - EnemyHurtbox
   - invisiwall
   - Pinecone
-  - 
-  - 
+  - Obstacles
+  - JumpBox
   - 
   - 
   - 

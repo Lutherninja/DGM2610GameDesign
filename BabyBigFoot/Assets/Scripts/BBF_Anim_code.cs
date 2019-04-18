@@ -5,7 +5,7 @@ using UnityEngine;
 public class BBF_Anim_code : MonoBehaviour
 {
    private Animator BBFAnimator;
-   private bool isWalkingpressed;
+   
    
     
     void Start()

@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 	public Transform Ball;
 	public Vector3 Tempvelocity;
 	public bool IsRolling;
+	public Animator BBFanimator;
 
 	
 	
@@ -63,6 +64,7 @@ public class Player : MonoBehaviour
 			myRigidBody.freezeRotation = true;
 			myRigidBody.gameObject.transform.rotation = Quaternion.identity;
 			
+
 		}
 	}
 
@@ -73,6 +75,17 @@ public class Player : MonoBehaviour
 			float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal"); //value is between -1 to +1
 			Vector3 playerVelocity = new Vector3(controlThrow * runSpeed, myRigidBody.velocity.y);
 			myRigidBody.velocity = playerVelocity;
+			BBFanimator.SetBool("IsWalking", true);
+			BBFanimator.SetBool("IsIdle", false);
+			BBFanimator.SetBool("IsFalling", false);
+		}
+
+		if (myRigidBody.velocity.x == 0)
+		{
+			BBFanimator.SetBool("IsIdle", true);
+			BBFanimator.SetBool("IsWalking", false);
+			BBFanimator.SetBool("StopRolling", false);
+			BBFanimator.SetBool("IsFalling", false);
 		}
 	}
 
@@ -81,6 +94,7 @@ public class Player : MonoBehaviour
 		
 		if (CrossPlatformInputManager.GetButtonDown("Jump"))
 		{
+			
 			Vector3 jumpVelocityToAdd = new Vector3(0f, jumpSpeed);
 			myRigidBody.velocity += jumpVelocityToAdd;
 		}
@@ -88,11 +102,32 @@ public class Player : MonoBehaviour
 		if (!isGrounded)
 		{
 			jumpSpeed = 0f;
+			BBFanimator.SetBool("IsWalking", false);
+			
+
+			
+			
 		}
 
 		if (isGrounded)
 		{
 			jumpSpeed = 19f;
+			BBFanimator.SetBool("IsFalling", false);
+			BBFanimator.SetBool("IsJumping", false);
+
+		}
+
+		if (myRigidBody.velocity.y < 0 && !isGrounded)
+		{
+			BBFanimator.SetBool("IsFalling",true);
+		}
+
+		if (myRigidBody.velocity.y > 0 && Input.GetButton("Jump"))
+		{
+			BBFanimator.SetBool("IsJumping",true);
+			BBFanimator.SetBool("IsFalling", false);
+			BBFanimator.SetBool("IsIdle", false);
+			BBFanimator.SetBool("IsWalking", false);
 		}
 
 	}

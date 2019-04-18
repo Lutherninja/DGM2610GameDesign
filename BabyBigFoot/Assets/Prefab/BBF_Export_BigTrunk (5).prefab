@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 736985789}
   - component: {fileID: 736985788}
   - component: {fileID: 736985786}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BBF_Export_BigTrunk (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
