@@ -41,6 +41,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="BBF_Anim_code.cs" t="Include" />
           <e p="BlinkingLights.cs" t="Include" />
           <e p="BoolData.cs" t="Include" />
           <e p="CameraMove.cs" t="Include" />
