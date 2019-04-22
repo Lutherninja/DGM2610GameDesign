@@ -1,5 +1,4 @@
-﻿using System.Net;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 
@@ -17,6 +16,7 @@ public class Player : MonoBehaviour
 	public Vector3 Tempvelocity;
 	public bool IsRolling;
 	public Animator BBFanimator;
+	public SphereCollider SphereGcheck;
 
 	
 	
@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
 			BBF.gameObject.SetActive(true);
 			Ball.gameObject.SetActive(false);
 			myRigidBody.freezeRotation = true;
+			
 			myRigidBody.gameObject.transform.rotation = Quaternion.identity;
 			
 

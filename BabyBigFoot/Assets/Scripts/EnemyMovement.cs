@@ -1,34 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float RunSpeed;
-    public float JumpForce;
-    public Rigidbody Enemyrigbod;
     public BoolData Slow;
-    public float SlowSpeed;
-    
-    
-    
-    
-    void Start()
-    {
-       
-    }
+    public BoolData ShortHop;
+    public BoolData LongHop;
+    public Rigidbody EnemyRigbod;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Start()
     {
-        Enemyrigbod.velocity = new Vector3(RunSpeed,-10,0);
+        Slow.Value = false;
+        ShortHop.Value = false;
+        LongHop.Value = false;
+       
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Jumpbox"))
+        if (other.gameObject.CompareTag("Jumpbox"))
         {
-            Enemyrigbod.velocity = new Vector3(RunSpeed,JumpForce,0);
+            EnemyRigbod.AddForce(0,100,0);
+            LongHop.Value = true;
         }
+
+        if (other.gameObject.CompareTag("Hopbox"))
+        {
+            ShortHop.Value = true;
+        }
+        if (other.gameObject.CompareTag("Snow"))
+        {
+            Slow.Value = true;
+        }
+    
     }
 }
+

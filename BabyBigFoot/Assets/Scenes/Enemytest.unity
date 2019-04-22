@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 135383582}
   - component: {fileID: 135383581}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Jump box
   m_TagString: Jumpbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1420,7 +1420,9 @@ GameObject:
   - component: {fileID: 776159310}
   - component: {fileID: 776159309}
   - component: {fileID: 776159308}
+  - component: {fileID: 776159313}
   - component: {fileID: 776159307}
+  - component: {fileID: 776159314}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1428,22 +1430,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &776159307
-Rigidbody:
+--- !u!143 &776159307
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776159306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &776159308
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1470,11 +1474,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3470673a8901f3c498171b3b940a2f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunSpeed: 10
-  JumpForce: 10
-  Enemyrigbod: {fileID: 776159307}
   Slow: {fileID: 11400000, guid: 08aa277786d14594b96fda25e1cabcee, type: 2}
-  SlowSpeed: 0
+  ShortHop: {fileID: 11400000, guid: 19cc92f8afd16a74bb7d209e75b69bbf, type: 2}
+  LongHop: {fileID: 11400000, guid: feb0a6ba2e1c2ca49a4d4dca9adeb156, type: 2}
+  EnemyRigbod: {fileID: 776159314}
 --- !u!23 &776159310
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1534,6 +1537,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &776159313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776159306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6c396c8dedbfc42abcfdd70f7400e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pattern: {fileID: 11400000, guid: 7df77697e755e0b4bbff2dd998d2806a, type: 2}
+--- !u!54 &776159314
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776159306}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!4 &794710707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6215985294054569349, guid: 43079f33f59ef6143aaddc8bde8fdb93,
@@ -2516,7 +2548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775178470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -8.5, y: 11.5, z: -97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

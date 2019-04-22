@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f56ead03074b418061a1d366aa8ae, type: 3}
+  m_Name: EnemyMovement
+  m_EditorClassIdentifier: 
+  JumpSpeed: {fileID: 11400000, guid: c115088e47b725746be3f65372f467bb, type: 2}
+  gravity: {fileID: 11400000, guid: 95284b8d1ec60ae45a1425fd12cff510, type: 2}
+  RotX: {fileID: 11400000, guid: 9e5191b13d2183746b7106189d996cde, type: 2}
+  RotY: {fileID: 11400000, guid: 9e5191b13d2183746b7106189d996cde, type: 2}
+  RotZ: {fileID: 11400000, guid: 9e5191b13d2183746b7106189d996cde, type: 2}
+  MoveX: {fileID: 11400000, guid: 4b440bee5084277438097b2aaeb12f16, type: 2}
+  MoveY: {fileID: 11400000, guid: 9e5191b13d2183746b7106189d996cde, type: 2}
+  MoveZ: {fileID: 11400000, guid: 9e5191b13d2183746b7106189d996cde, type: 2}
+  SmallJump: {fileID: 11400000, guid: 9e5191b13d2183746b7106189d996cde, type: 2}
+  Slow: {fileID: 11400000, guid: 08aa277786d14594b96fda25e1cabcee, type: 2}
+  SlowSpeed: {fileID: 11400000, guid: 22eadc3b48bb4f741b4e7c0346531b90, type: 2}
+  Shorthop: {fileID: 11400000, guid: 19cc92f8afd16a74bb7d209e75b69bbf, type: 2}
+  LongHop: {fileID: 11400000, guid: feb0a6ba2e1c2ca49a4d4dca9adeb156, type: 2}
