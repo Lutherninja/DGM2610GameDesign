@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 	public Vector3 Tempvelocity;
 	public bool IsRolling;
 	public Animator BBFanimator;
-	public SphereCollider SphereGcheck;
+	
 
 	
 	
@@ -138,7 +138,7 @@ public class Player : MonoBehaviour
 	private void OnTriggerStay(Collider other)
 	{
 		// not working how  I thought
-		if (myFeetCollider && LayerMask.GetMask("Ground") != 0)
+		//if (LayerMask.GetMask("Ground") != 0)
 		{
 			isGrounded = true;
 			jumpSpeed = 19f;

@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class SnowDestroy : MonoBehaviour
 {
+    public ParticleSystem destroylog;
+    public GameObject shiny;
+    public GameObject Mesh;
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject, 10);
+            destroylog.Emit(30);
+           
+            
+            Destroy(gameObject);
         }
     }
 }
