@@ -22,6 +22,7 @@ public class SlowEnemy : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Slow.Value = false;
+            Destroy(gameObject, 1);
         }
     }
 }

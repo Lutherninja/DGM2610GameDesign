@@ -117,7 +117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4738027007493005486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.456623, y: 21.03543, z: -1.3832779}
+  m_LocalPosition: {x: -33.19727, y: 24.995604, z: -1.9999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4738027006360535157}
@@ -138,6 +138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyrigBod: {fileID: 0}
   Slow: {fileID: 11400000, guid: 08aa277786d14594b96fda25e1cabcee, type: 2}
+  Jump: 0
+  Threshhold: {fileID: 0}
+  xOffset: 0
 --- !u!54 &4738027007493005489
 Rigidbody:
   m_ObjectHideFlags: 0

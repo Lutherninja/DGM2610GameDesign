@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 1698763431992932585}
   - component: {fileID: 1698763431992932584}
   - component: {fileID: 1698763431992932596}
-  - component: {fileID: 1698763431992932599}
   - component: {fileID: 485645264222959504}
   - component: {fileID: 1777559580981747504}
   m_Layer: 9
@@ -227,19 +226,6 @@ MonoBehaviour:
   Pinecone: {fileID: 1400243815, guid: 6018b5e73507bc947b661984ed6a9af1, type: 3}
   Pineconeneg: {fileID: 0}
   pcSpawn: {fileID: 1698763431678978187}
---- !u!65 &1698763431992932599
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698763431992932587}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 3.9325254, y: 2.4435217, z: 3.6385021}
-  m_Center: {x: 0.37687364, y: 0.7217609, z: 0.042915117}
 --- !u!95 &485645264222959504
 Animator:
   serializedVersion: 3
