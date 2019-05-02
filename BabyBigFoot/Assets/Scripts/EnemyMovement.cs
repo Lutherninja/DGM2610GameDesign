@@ -7,13 +7,12 @@ public class EnemyMovement : MonoBehaviour
     public Rigidbody EnemyrigBod;
     public BoolData Slow;
     public bool Jump;
-    public GameObject Threshhold;
-    public float xOffset;
+   
 
 
     private void Start()
     {
-        EnemyrigBod = GetComponent<Rigidbody>();
+        
         Slow.Value = false;
         Jump = false;
     }

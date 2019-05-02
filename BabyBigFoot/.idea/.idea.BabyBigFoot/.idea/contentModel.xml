@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Londathan\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_BabyBigFoot.889625747.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Londathan\Desktop\MyRepos\Spring2019\DGM2610GameDesign\BabyBigFoot" t="IncludeRecursive">
+    <e p="C:\Users\10689129\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\10689129\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_BabyBigFoot.-1702092044.00" t="ExcludeRecursive" />
+    <e p="C:\Users\10689129\Documents\MyRepos\Spring2019\DGM2610GameDesign\BabyBigFoot" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
@@ -48,6 +49,7 @@
           <e p="Changer.cs" t="Include" />
           <e p="CharacterMovement.cs" t="Include" />
           <e p="DeathZone.cs" t="Include" />
+          <e p="EnemyKill.cs" t="Include" />
           <e p="EnemyMovement.cs" t="Include" />
           <e p="Flip.cs" t="Include" />
           <e p="FloatData.cs" t="Include" />
@@ -57,11 +59,14 @@
           <e p="PineconeVelocity.cs" t="Include" />
           <e p="PineconeVelocitynegative.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="ResetPosition.cs" t="Include" />
+          <e p="ResetRotation.cs" t="Include" />
           <e p="Restart.cs" t="Include" />
           <e p="SlowEnemy.cs" t="Include" />
           <e p="SnowBallDeath.cs" t="Include" />
           <e p="SnowDestroy.cs" t="Include" />
           <e p="SnowFall.cs" t="Include" />
+          <e p="SoundPlayer.cs" t="Include" />
           <e p="Switch.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
